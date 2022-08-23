@@ -1,9 +1,12 @@
 let providerSideProject = require('../../provider/side');
 
+/**
+ * @controller
+ */
 class Side {
 
     /**
-     * @public
+     * @public, @get
      * Récupère un side project
      *
      * @param {object} req 
@@ -16,7 +19,7 @@ class Side {
     }
 
     /**
-     * @public
+     * @public, @get
      * Récupère l'ensemble des sides projects
      *
      * @param {object} req 
@@ -29,7 +32,7 @@ class Side {
     }
 
     /**
-     * @public
+     * @public, @post
      * Ajoute un side project
      *
      * @param {object} req 
@@ -42,7 +45,7 @@ class Side {
     }
 
     /**
-     * @public
+     * @public, @update
      * Mets à jour un side project
      *
      * @param {object} req 
@@ -55,7 +58,7 @@ class Side {
     }
 
     /**
-     * @public
+     * @public, @delete
      * Supprime un side project
      *
      * @param {object} req 

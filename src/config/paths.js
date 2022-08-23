@@ -5,6 +5,7 @@ const paths = {
     project: `${server.url}/project`,
     side: `${server.url}/side`,
     stat: `${server.url}/stat`,
+    login:  `${server.url}/login`,
 };
 
 module.exports = paths;

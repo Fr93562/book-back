@@ -1,7 +1,12 @@
+let providerUser = require('../../provider/user');
+
+/**
+ * @controller
+ */
 class User {
 
     /**
-     * @public
+     * @public, @get
      * Récupère le user
      *
      * @param {object} req 
@@ -14,7 +19,7 @@ class User {
     }
 
     /**
-     * @public
+     * @public, @update
      * Mets à jour le user
      *
      * @param {object} req 

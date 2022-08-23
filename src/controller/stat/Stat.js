@@ -1,7 +1,12 @@
+let providerStat = require('../../provider/stat');
+
+/**
+ * @controller
+ */
 class Stat {
 
     /**
-     * @public
+     * @public, @get
      * Mets l'ensemble des stats
      *
      * @param {object} req 
@@ -9,12 +14,12 @@ class Stat {
      * @returns - response
      */
     getAll(raq, res) {
-        const stats = providerUser.getAll();
+        const stats = providerStat.getAll();
         return res.send(stats);
     }
 
     /**
-     * @public
+     * @public, @update
      * Mets à jour une stat
      *
      * @param {object} req 
@@ -22,7 +27,7 @@ class Stat {
      * @returns - response
      */
     update(raq, res) {
-        const user = providerUser.update();
+        const user = providerStat.update();
         return res.send(user);
     }
 }

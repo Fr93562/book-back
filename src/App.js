@@ -1,5 +1,5 @@
 let express = require('express');
-let router = require('./router');
+let router = require('./Router');
 let config = require('./config/server');
 
 class App {
@@ -22,7 +22,7 @@ class App {
         this.setApi(express());
 
         this.api.use(express.json());
-        router( this.api);
+        router.dispatch( this.api);
 
         this.api.listen(config.port);
 

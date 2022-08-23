@@ -1,9 +1,12 @@
 let providerProject = require('../../provider/project');
 
+/**
+ * @controller
+ */
 class Project {
 
     /**
-     * @public
+     * @public, @get
      * Récupère l'ensemble des projets
      *
      * @param {object} req 
@@ -16,7 +19,7 @@ class Project {
     }
 
     /**
-     * @public
+     * @public, @post
      * Ajoute un nouveau projet
      *
      * @param {object} req 
@@ -29,7 +32,7 @@ class Project {
     }
 
     /**
-     * @public
+     * @public, @update
      * Mets à jour un projet
      *
      * @param {object} req 
@@ -42,7 +45,7 @@ class Project {
     }
 
     /**
-     * @public
+     * @public, @delete
      * Supprime un projet
      *
      * @param {object} req 
