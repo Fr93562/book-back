@@ -1,3 +1,4 @@
+const UserEntity = require('./UserEntity');
 const mock = require('../../mocks/user');
 
 /**
@@ -10,9 +11,10 @@ class UserProvider{
      * @returns - object
      */
     get() {
-        const user = mock;
-    
-        return user;
+        const userDatabase = mock;
+        const user = new UserEntity(userDatabase);
+
+        return user.toJson();
     }
 
     /**
