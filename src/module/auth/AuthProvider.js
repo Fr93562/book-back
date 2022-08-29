@@ -1,11 +1,40 @@
-const mock = require('../../mock/user');
+let providerUser = require('../user/UserProvider');
+let securityToken = require('../../security/Token');
 
-function compare() {
-    const result = 'mock';
+/**
+ * @provider
+ */
+class AuthProvider {
+    /**
+     * @public
+     * Gère le login de l'utilisateur
+     * @param {object} entryUser
+     * @returns - string
+     */
+    login(entryUser) {
+        let databaseUser = providerUser.get('futur user');
+        let check = { mail: false, password: false };
+        let response = '';
 
-    return result;
+        if (databaseUser && entryUser) {
+            check.mail = databaseUser.mail === entryUser.mail;
+            check.password = databaseUser.password === entryUser.password;
+        }
+
+        if (check.mail && check.password) {
+            response = securityToken.create(entryUser);
+        }
+        return response;
+    }
+
+    /**
+     * @public
+     * Vérifie la validité du token
+     * @returns - string
+     */
+    verify() {
+        return securityToken.verify(token);
+    }
 }
 
-module.exports = {
-    compare,
-};
+module.exports = new AuthProvider();

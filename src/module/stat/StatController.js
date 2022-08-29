@@ -3,7 +3,7 @@ let providerStat = require('./StatProvider');
 /**
  * @controller
  */
-class Stat {
+class StatController {
 
     /**
      * @public, @get
@@ -32,4 +32,4 @@ class Stat {
     }
 }
 
-module.exports = new Stat();
+module.exports = new StatController();

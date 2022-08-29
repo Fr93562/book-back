@@ -3,7 +3,7 @@ let providerSideProject = require('./SideProvider');
 /**
  * @controller
  */
-class Side {
+class SideController {
 
     /**
      * @public, @get
@@ -71,4 +71,4 @@ class Side {
     }
 }
 
-module.exports = new Side();
+module.exports = new SideController();

@@ -3,7 +3,7 @@ let providerProject = require('./ProjectProvider');
 /**
  * @controller
  */
-class Project {
+class ProjectController {
 
     /**
      * @public, @get
@@ -58,4 +58,4 @@ class Project {
     }
 };
 
-module.exports = new Project();
+module.exports = new ProjectController();

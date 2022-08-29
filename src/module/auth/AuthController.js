@@ -4,7 +4,7 @@ let providerUser = require('../user/UserProvider');
 /**
  * @controller
  */
-class Authentification {
+class AuthController {
     /**
      * @public, @post , @security
      * Récupère l'ensemble des projets
@@ -30,4 +30,4 @@ class Authentification {
     }
 }
 
-module.exports = new Authentification();
+module.exports = new AuthController();
