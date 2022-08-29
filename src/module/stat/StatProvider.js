@@ -1,4 +1,4 @@
-const mock = require('../mock/stats');
+const mock = require('../../mock/stats');
 
 function getAll() {
     const listStats = mock;

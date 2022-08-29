@@ -1,4 +1,4 @@
-let providerUser = require('../../provider/user');
+let providerUser = require('./UserProvider');
 
 /**
  * @controller

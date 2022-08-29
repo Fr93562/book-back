@@ -1,4 +1,4 @@
-let providerSideProject = require('../../provider/side');
+let providerSideProject = require('./SideProvider');
 
 /**
  * @controller

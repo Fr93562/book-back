@@ -1,4 +1,4 @@
-const mock = require('../mock/user');
+const mock = require('../../mock/user');
 
 function get() {
     const user = mock;

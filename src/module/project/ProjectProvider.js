@@ -1,15 +1,9 @@
-const mock = require('../mock/sideProject');
-
-function get(id) {
-    const side = mock[i];
-
-    return side;
-}
+const mock = require('../../mock/projects');
 
 function getAll() {
-    const listSide = mock;
+    const listSideProject = mock;
 
-    return listSide;
+    return listSideProject;
 }
 
 function create(sideProject) {
@@ -18,9 +12,9 @@ function create(sideProject) {
 }
 
 function update(id) {
-    const side = mock[i];
+    const sideProject = mock[i];
 
-    return side;
+    return sideProject;
 }
 
 function remove(id) {
@@ -29,7 +23,6 @@ function remove(id) {
 }
 
 module.exports = {
-    get: get,
     getAll: getAll,
     create: create,
     update: update,

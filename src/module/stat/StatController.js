@@ -1,4 +1,4 @@
-let providerStat = require('../../provider/stat');
+let providerStat = require('./StatProvider');
 
 /**
  * @controller

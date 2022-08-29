@@ -1,10 +1,10 @@
 const paths = require('./config/paths');
 
-let controllerAuthenfication = require('./controller/authentification/Authentification');
-let controllerProject = require('./controller/project/Project');
-let controllerSide = require('./controller/side/Side');
-let controllerStat = require('./controller/stat/Stat');
-let controllerUser = require('./controller/user/User');
+let controllerAuthenfication = require('./module/auth/AuthController');
+let controllerProject = require('./module/project/ProjectController');
+let controllerSide = require('./module/side/SideController');
+let controllerStat = require('./module/stat/StatController');
+let controllerUser = require('./module/user/UserController');
 
 let middlewareSecurity = require('./middleware/security/logged');
 

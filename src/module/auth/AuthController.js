@@ -1,5 +1,5 @@
-let providerAuthentification = require('../../provider/authentification');
-let providerUser = require('../../provider/user');
+let providerAuthentification = require('./AuthProvider');
+let providerUser = require('../user/UserProvider');
 
 /**
  * @controller
