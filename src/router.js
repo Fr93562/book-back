@@ -1,12 +1,12 @@
-const paths = require('./config/paths');
+const paths = require('./configs/paths');
 
-let controllerAuthenfication = require('./module/auth/AuthController');
-let controllerProject = require('./module/project/ProjectController');
-let controllerSide = require('./module/side/SideController');
-let controllerStat = require('./module/stat/StatController');
-let controllerUser = require('./module/user/UserController');
+let controllerAuthenfication = require('./modules/auth/AuthController');
+let controllerProject = require('./modules/project/ProjectController');
+let controllerSide = require('./modules/side/SideController');
+let controllerStat = require('./modules/stat/StatController');
+let controllerUser = require('./modules/user/UserController');
 
-let middlewareSecurity = require('./middleware/security/logged');
+let middlewareSecurity = require('./middlewares/security/logged');
 
 class Router {
     /**
@@ -27,6 +27,7 @@ class Router {
     dispatch(app) {
         app.post(paths.login, middlewareSecurity.unlogged, controllerAuthenfication.login );
 
+        console.log('here');
 
         app.get(paths.user, controllerUser.get );
         app.put(paths.user, middlewareSecurity.logged, controllerUser.update );

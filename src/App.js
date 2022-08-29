@@ -1,6 +1,6 @@
 let express = require('express');
 let router = require('./Router');
-let config = require('./config/server');
+let config = require('./configs/server');
 
 class App {
     api= '';

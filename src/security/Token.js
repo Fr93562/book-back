@@ -1,5 +1,5 @@
 let jwt = require('jsonwebtoken');
-let configSecurity = require('../config/security');
+let configSecurity = require('../configs/security');
 
 /**
  * @security
