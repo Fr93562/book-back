@@ -51,7 +51,7 @@ class UserEntity {
     /**
      * @public
      * Transforme l'instance en objet javascript
-     * @returns 
+     * @returns - object
      */
     toJson() {
         const user = {
