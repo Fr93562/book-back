@@ -3,5 +3,5 @@ module.exports = {
   surname: 'Macko',
   job: 'Développeur Fullstack Javascript',
   mail: 'francois.mackowski@gmail.com',
-  password: 'xxxxx',
+  password: '$2b$10$zwgk3KzFtZnHQWnC1Jm92eAgrhkrO.phhFunpJ5XvrWvoyNn/wVgq',
 };

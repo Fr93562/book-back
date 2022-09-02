@@ -1,9 +1,10 @@
 let express = require('express');
+let bodyParser = require('body-parser')
 let router = require('./Router');
 let config = require('./configs/server');
 
 class App {
-    api= '';
+    api = '';
 
     /**
      * @private
@@ -22,8 +23,10 @@ class App {
         this.setApi(express());
 
         this.api.use(express.json());
-        router.dispatch( this.api);
+        this.api.use(bodyParser.json());
+        this.api.use(bodyParser.urlencoded({ extended: true }));
 
+        router.dispatch(this.api);
         this.api.listen(config.port);
 
         console.log(`Server is currently runnig on port ${config.port} : http://localhost:${config.port}/`);

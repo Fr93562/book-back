@@ -1,5 +1,5 @@
 let providerProject = require('./ProjectProvider');
-
+let securityHash = require('../../security/Hash');
 /**
  * @controller
  */
@@ -15,6 +15,7 @@ class ProjectController {
      */
     getAll(req, res) {
         const listSideProject = providerProject.getAll();
+        console.log('my hash', securityHash.create('test'));
         return res.send(listSideProject);
     }
 

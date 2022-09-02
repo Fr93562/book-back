@@ -16,7 +16,7 @@ class AuthController {
      * @returns - response
      */
     login(req, res) {
-        let { body } = req.body;
+        let body = req.body;
         let isBody = body && body.mail && body.password;
         let authentified = '';
 

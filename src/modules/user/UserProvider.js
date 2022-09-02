@@ -17,6 +17,13 @@ class UserProvider{
         return user.toJson();
     }
 
+    getComplete() {
+        const userDatabase = mock;
+        const user = new UserEntity(userDatabase);
+
+        return user.toCompleteJson();
+    }
+
     /**
      * @public
      * Mets à jour un user

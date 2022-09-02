@@ -6,12 +6,14 @@ class UserEntity {
     surname = '';
     job = '';
     mail = '';
+    password= '';
 
     constructor(user) {
         this.setName(user.name);
         this.setUsername(user.surname);
         this.setJob(user.job);
         this.setMail(user.mail);
+        this.setPassword(user.password);
     }
 
     // setters
@@ -49,6 +51,14 @@ class UserEntity {
     }
 
     /**
+     * @private
+     * @param {string} mail 
+     */
+    setPassword(password) {
+        this.password = password;
+    }
+
+    /**
      * @public
      * Transforme l'instance en objet javascript
      * @returns - object
@@ -62,7 +72,19 @@ class UserEntity {
         };
 
         return user;
-    } 
+    }
+
+    toCompleteJson() {
+        const user = {
+            name: this.name,
+            surname: this.surname,
+            job: this.job,
+            mail: this.mail,
+            password: this.password,
+        };
+
+        return user;
+    }
 }
 
 module.exports = UserEntity;

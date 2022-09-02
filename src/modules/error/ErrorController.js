@@ -35,7 +35,7 @@ class ErrorController {
      */
     forbidden(req, res) {
         const response = { message: 'Invalids credentials' };
-        return res.status(401).send(response);
+        return res.status(403).send(response);
     }
 
     /**
