@@ -25,7 +25,7 @@ function getLogged (req) {
  */
 function isLogged(req, res, next) {
     let logged = getLogged(req);
-
+    console.log('result of getlogged', logged);
     if (logged) {
         next();
     } else {

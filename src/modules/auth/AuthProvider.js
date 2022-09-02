@@ -26,15 +26,6 @@ class AuthProvider {
         }
         return response;
     }
-
-    /**
-     * @public
-     * Vérifie la validité du token
-     * @returns - string
-     */
-    verify() {
-        return securityToken.verify(token);
-    }
 }
 
 module.exports = new AuthProvider();

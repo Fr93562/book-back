@@ -5,3 +5,5 @@ const security = {
     salt: 10,
     header: 'auth',
 };
+
+module.exports = security;

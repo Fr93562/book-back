@@ -1,5 +1,7 @@
-let providerAuthentification = require('./AuthProvider');
+let configSecurity = require('../../configs/security');
+let providerAuth = require('./AuthProvider');
 let providerUser = require('../user/UserProvider');
+let errorController = require('../error/ErrorController');
 
 /**
  * @controller
@@ -14,17 +16,22 @@ class AuthController {
      * @returns - response
      */
     login(req, res) {
-        let authentified = providerAuthentification.compare();
-        let token = 'nop';
+        let { body } = req.body;
+        let isBody = body && body.mail && body.password;
+        let authentified = '';
 
-        if (authentified) {
-            token = 'token'
+        if (isBody) {
+            authentified = providerAuth.login(body);
+        }
+
+        if(!authentified) {
+            return errorController.forbidden(req, res);
         }
 
         const response = {
-            user: providerUser.get(),
-            token: 'kikou',
-        }
+            header: configSecurity.header,
+            token: authentified,
+        };
 
         return res.send(response);
     }

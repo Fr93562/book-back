@@ -11,7 +11,7 @@ class ErrorController {
      */
     notFound(req, res) {
         const response = { message: 'Not found' };
-        return res.status(404).render(response);
+        return res.status(404).send(response);
     }
 
     /**
@@ -22,8 +22,20 @@ class ErrorController {
      * @return - response
      */
     empty(req, res) {
-        const response = { message: 'The body is empty.' };
-        return res.status(400).render(response);
+        const response = { message: 'Empty body' };
+        return res.status(400).send(response);
+    }
+
+    /**
+     * @public
+     * Indique sur l'utilisateur n'est pas connecté
+     * @param {object} req 
+     * @param {object} res
+     * @return - response
+     */
+    forbidden(req, res) {
+        const response = { message: 'Invalids credentials' };
+        return res.status(401).send(response);
     }
 
     /**
@@ -34,8 +46,8 @@ class ErrorController {
      * @return - response
      */
     unauthorized(req, res) {
-        const response = { message: 'The user is currently not authentified.' };
-        return res.status(401).render(response);
+        const response = { message: 'Not authentified' };
+        return res.status(401).send(response);
     }
 
     /**
@@ -46,8 +58,8 @@ class ErrorController {
      * @return - response
      */
     alreadyAuthorized(req, res) {
-        const response = { message: 'The user is already authentified.' };
-        return res.status(403).render(response);
+        const response = { message: 'Already authentified' };
+        return res.status(403).send(response);
     }
 };
 

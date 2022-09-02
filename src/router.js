@@ -43,7 +43,7 @@ class Router {
         app.put(`${paths.side}${this.addParam()}`, middlewareAuth.isLogged, middlewareBody, controllerSide.update );
         app.delete(`${paths.side}${this.addParam()}`, middlewareAuth.isLogged, middlewareBody, controllerSide.delete );
     
-        app.get(`${paths.stat}${this.addParam()}`, middlewareAuth.isLogged, middlewareBody, controllerStat.getAll );
+        app.get(`${paths.stat}`, middlewareAuth.isLogged, middlewareBody, controllerStat.getAll );
         app.put(paths.stat, middlewareAuth.isLogged, middlewareBody, controllerStat.update );
     }
 };
