@@ -8,14 +8,12 @@
     image= '';
     content= '';
 
-    constructor(side) {
-        const { name, brand, description, image, content } = side;
-
-        this.setName(name);
-        this.setBrand(brand);
-        this.setDescription(description);
-        this.setImage(image);
-        this.setContent(content);
+    constructor(project) {
+        this.setName(project.name);
+        this.setBrand(project.brand);
+        this.setDescription(project.description);
+        this.setImage(project.image);
+        this.setContent(project.content);
     }
 
     // setters

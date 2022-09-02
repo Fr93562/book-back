@@ -9,13 +9,11 @@ class SideEntity {
     content= '';
 
     constructor(side) {
-        const { name, date, description, image, content } = side;
-
-        this.setName(name);
-        this.setDate(date);
-        this.setDescription(description);
-        this.setImage(image);
-        this.setContent(content);
+        this.setName(side.name);
+        this.setDate(side.date);
+        this.setDescription(side.description);
+        this.setImage(side.image);
+        this.setContent(side.content);
     }
 
     // setters
